@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "b819b574-da6b-4edc-b9e2-4aa57f1066b6",
+		"name": "Prueba_Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35331332"
+	},
+	"item": [
+		{
+			"name": "Obtener Personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Todos los Clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Cliente por id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/getById/58f7869b-08be-4a7e-a385-fe40d3d057cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"getById",
+						"58f7869b-08be-4a7e-a385-fe40d3d057cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener cliente por identificacion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/getByIdentificacion/1718908716",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"getByIdentificacion",
+						"1718908716"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contrasena\": \"miclave123\",\r\n  \"estado\": true,\r\n  \"persona\": {\r\n    \"nombre\": \"Juan Pérez\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 30,\r\n    \"identificacion\": \"1234567890\",\r\n    \"direccion\": \"Av. Siempre Viva 123\",\r\n    \"telefono\": \"0987654321\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contrasena\": \"nuevaClave123\",\r\n  \"estado\": true,\r\n  \"persona\": {\r\n    \"nombre\": \"Juan Actualizado\",\r\n    \"genero\": \"M\",\r\n    \"edad\": 31,\r\n    \"identificacion\": \"0987654321\",\r\n    \"direccion\": \"Nueva Dirección 456\",\r\n    \"telefono\": \"0999999999\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/58f7869b-08be-4a7e-a385-fe40d3d057cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"58f7869b-08be-4a7e-a385-fe40d3d057cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/clientes/58f7869b-08be-4a7e-a385-fe40d3d057cb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"clientes",
+						"58f7869b-08be-4a7e-a385-fe40d3d057cb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Movimiento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"cuentaId\": \"{{cuentaId}}\",\n  \"fecha\": \"2025-08-05T12:00:00\",\n  \"tipoMovimiento\": \"RETIRO\",\n  \"valor\": -200.00,\n  \"saldo\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movimientos/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movimientos",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Movimientos por CuentaId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movimientos/getByCuentaId/{{cuentaId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movimientos",
+						"getByCuentaId",
+						"{{cuentaId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte Estado de Cuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/movimientos/estadoCuenta?clienteId={{clienteId}}&fechaInicio={{fechaInicio}}&fechaFin={{fechaFin}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"movimientos",
+						"estadoCuenta"
+					],
+					"query": [
+						{
+							"key": "clienteId",
+							"value": "{{clienteId}}"
+						},
+						{
+							"key": "fechaInicio",
+							"value": "{{fechaInicio}}"
+						},
+						{
+							"key": "fechaFin",
+							"value": "{{fechaFin}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
